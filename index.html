@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Simple Image editor with text adding feature and filtering image">
+        <title>Image Editor</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div class="header flexStyle gap items-center">
+            <h1 class="title">IMAGE EDITOR</h1>
+            <!-- <div class="editor-input"> -->
+            <label class="btn-select" for="imageInput">Select Image</label>
+            <input type="file" class="file" id="imageInput">
+
+            <!-- </div> -->
+        </div>
+        <div class="editor">
+            <div class="editor-tool">
+                <div class="editor-input flexStyle gap">
+                    <label class="label" for="brightness">Brightness</label>
+                    <div class="wrapper">
+
+                        <input type="range" id="brightness" min="0" max="200">
+                    </div>
+                </div>
+                <div class="editor-input flexStyle gap">
+                    <label class="label" for="hue">Hue</label>
+                    <div class="wrapper">
+
+                        <input type="range" id="hue" min="0" max="360">
+                    </div>
+                </div>
+                <div class="editor-input flexStyle gap">
+                    <label class="label" for="opacity">Opacity</label>
+                    <div class="wrapper">
+
+                        <input type="range" id="opacity" min="0" max="100">
+                    </div>
+                </div>
+                <div class="editor-input flexStyle gap">
+                    <label class="label" for="saturation">Saturation</label>
+                    <div class="wrapper">
+
+                        <input type="range" id="saturation" min="0" max="100">
+                    </div>
+                </div>
+                <div class="editor-input flexStyle gap">
+                    <label class="label" for="grayscale">Grayscale</label>
+                    <div class="wrapper">
+
+                        <input type="range" id="grayscale" min="0" max="100">
+                    </div>
+                </div>
+                <div class="editor-input flexStyle gap">
+                    <label class="label" for="sepia">Sepia</label>
+                    <div class="wrapper">
+
+                        <input type="range" id="sepia" min="0" max="100">
+                    </div>
+                </div>
+                <div class="editor-input flexStyle gap">
+                    <label class="label" for="blur">Blur</label>
+                    <div class="wrapper">
+
+                        <input type="range" id="blur" min="0" max="10">
+                    </div>
+                </div>
+                <div class="editor-input flexStyle gap">
+                    <label class="label" for="inversion">Inversion</label>
+                    <div class="wrapper">
+
+                        <input type="range" id="inversion" min="0" max="100">
+                    </div>
+                </div>
+                <div class="editor-input flexStyle">
+                    <label class="label" for="teks">Insert Text</label>
+                    <div class="wrapper flexStyle items-center">
+
+                        <input type="text" id="teks">
+                        <button id="addBtn">Add</button>
+                        <label for="color">color</label>
+                        <input type="color" name="teksColor" id="color">
+                    </div>
+                </div>
+                <div class="editor-input flexStyle">
+                    <label class="label" for="font">Font</label>
+                    <select name="font" id="font">
+                        <option value="0" selected>Arial</option>
+                        <option value="1">Verdana</option>
+                        <option value="2">Times New Roman</option>
+                        <option value="3">Courier New</option>
+                        <option value="4">serif</option>
+                        <option value="5">sans-serif</option>
+                    </select>
+                </div>
+                <div class="editor-input flexStyle">
+                    <label class="label" for="textSize">Text Size (px)</label>
+                    <div class="flexStyle gap">
+                        <input type="number" id="textSize">
+                        <input type="button" id="btnMin" value="-">
+                        <input type="button" id="btnAdd" value="+">
+                    </div>
+                </div>
+                <div class="editor-input flexStyle">
+                    <label class="label" for="x-position">X</label>
+                    <div class="flexStyle gap">
+                        <input type="text" id="x-position">
+                        <input type="button" id="btnMinX" value="-">
+                        <input type="button" id="btnAddX" value="+">
+                    </div>
+                </div>
+                <div class="editor-input flexStyle">
+                    <label class="label" for="y-position">Y</label>
+                    <div class="flexStyle gap">
+                        <input type="text" id="y-position">
+                        <input type="button" id="btnMinY" value="-">
+                        <input type="button" id="btnAddY" value="+">
+                    </div>
+                </div>
+                <!-- <div class="editor-input">
+                </div> -->
+                <div class="editor-input">
+                    <button disabled id="btnDownload" onclick="downloadImage()">
+                        Download
+                    </button>
+                    <button id="reset">
+                        Reset
+                    </button>
+                </div>
+            </div>
+            <div class="editor-canvas">
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+            integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- <script
+            src="https://rawcdn.githack.com/kousik19/foto.js/d604b02c69b6f037875bc4a3050b85d776dc4659/foto.js"></script> -->
+        <script src="js/main.js"></script>
+
+    </body>
+
+</html>
